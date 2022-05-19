@@ -7,7 +7,13 @@ function ExpenseItem(_Paras_from_Appjs) {
 
   return (
     <div className="expense-item">
-      <dv>{expenseDate.toISOString()}</dv>
+      <dv>
+        <div>
+          {_Paras_from_Appjs.date.toLocaleString("en-US", { month: "long" })}
+        </div>
+        <div></div>
+        <div></div>
+      </dv>
       <div className="expense-item__description">
         <h2> {_Paras_from_Appjs.title} </h2>
         <div className="expense-item__price"> £{_Paras_from_Appjs.amount}</div>
